@@ -13,3 +13,22 @@
 body {
   font-family: var(--font-sans);
 }
+
+/* Page loader — structure only; each app sets its own background color */
+.crubio-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s ease;
+}
+.crubio-loader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+.crubio-loader i {
+  font-size: 2rem;
+  opacity: 0.4;
+}
