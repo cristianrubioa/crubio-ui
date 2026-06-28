@@ -6,6 +6,8 @@
   --panel-w: 20rem;
   --header-h: 4rem;
   --footer-size: 0.875rem;
+  --app-name-size: 1.75rem;
+  --footer-padding-y: 0.75rem;
 }
 
 body {
