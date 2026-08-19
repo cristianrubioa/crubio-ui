@@ -33,6 +33,14 @@ body {
   opacity: 0.4;
 }
 
+/* Section label — labels that group 2+ distinct controls. Color is left to the consumer. */
+.crubio-section-label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
 /* Header link back to crubio.fyi — drop into any header with display:flex */
 .crubio-home-link {
   margin-left: auto;
