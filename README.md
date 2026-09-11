@@ -22,6 +22,13 @@ A **section label** groups 2+ distinct controls (e.g. a "Location" heading above
 
 `--header-gap` (0.75rem), `--hamburger-icon-size` (1.25rem), and `--logo-size` (1.5rem) standardize the app-shell header's hamburger toggle, logo, and inter-element spacing. Apply `--header-gap` as the header's flex `gap`. Apply `--hamburger-icon-size`/`--logo-size` as `font-size` on a font-glyph icon (e.g. a Font Awesome `<i>`), or as `width`/`height` on an inline SVG icon component — whichever matches your icon technology.
 
+## Sidebar footer
+
+The sidebar's "Made with ♥" footer standardizes on two things:
+
+- **Color**: apply `color: var(--footer-text-color)` (`#4b5563`) to the footer text for its light-mode (or only) theme. Dark-mode/dark-theme consumers keep their own override on top — this variable only sets the light-mode default.
+- **Structure**: the footer element SHALL be a `shrink-0` (or `mt-auto`) sibling positioned *outside* the sidebar's scrollable content region — not a child of the same `overflow-y-auto` container as the form/nav content — so it stays visible regardless of how tall that content grows. The sidebar's own height SHALL be computed safely against mobile browser chrome, using either `height: 100dvh` (with a `100vh` fallback for older browsers) or `position: fixed` anchored to both `top` and `bottom: 0` (letting the browser compute the height directly). `tokens.css` can't enforce this — it depends on how each consumer nests its own markup — so get it right at authoring time.
+
 ## Adding a new identity
 
 Create a new folder with a `tokens.css` file. No other changes needed.
